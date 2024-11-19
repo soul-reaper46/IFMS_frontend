@@ -76,7 +76,14 @@ const useAuth = () => {
 		}
 	};
 
-	const signup = async (name, email, password, phone, dob) => {
+	const signup = async (
+		name,
+		email,
+		password,
+		phone,
+		dob,
+		riskprofile
+	) => {
 		try {
 			const userDetails = {
 				name: name,
@@ -84,6 +91,7 @@ const useAuth = () => {
 				newpassword: password,
 				phone: phone,
 				dob: dob,
+				riskprofile: riskprofile,
 			};
 			const data = await signupUser(userDetails);
 			localStorage.setItem("token", data.token);

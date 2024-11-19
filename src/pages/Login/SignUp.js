@@ -4,7 +4,6 @@ import {
 	TextField,
 	Button,
 	Typography,
-	Container,
 	Paper,
 	Avatar,
 } from "@mui/material";
@@ -19,6 +18,7 @@ const SignUp = ({ onSignUp }) => {
 	const [password, setPassword] = useState("");
 	const [phone, setPhone] = useState("");
 	const [dob, setDob] = useState(null);
+	const [riskprofile, setriskprofile] = useState("Moderate");
 	const navigate = useNavigate();
 	const [phoneError, setPhoneError] = useState("");
 	const [isTouched, setIsTouched] = useState(false);
@@ -65,7 +65,8 @@ const SignUp = ({ onSignUp }) => {
 			email,
 			password,
 			phone,
-			dob
+			dob,
+			riskprofile
 		);
 		if (!success) {
 			setError(
@@ -75,12 +76,25 @@ const SignUp = ({ onSignUp }) => {
 	};
 
 	return (
-		<Container maxWidth="xs" sx={{ mt: 8 }}>
+		<Box
+			sx={{
+				minHeight: "100vh",
+				backgroundImage: "url('/images/login.jpeg')", // Background image for signup page
+				backgroundSize: "cover",
+				backgroundPosition: "center",
+				display: "flex",
+				justifyContent: "center",
+				alignItems: "center",
+				p: 2,
+			}}
+		>
 			<Paper
-				elevation={3}
+				elevation={6}
 				sx={{
 					padding: 4,
-					borderRadius: 2,
+					borderRadius: 3,
+					bgcolor: "rgba(255, 255, 255, 0.98  )", // Semi-transparent white background
+					width: { xs: "90%", sm: "400px" }, // Card width
 				}}
 			>
 				{/* Logo at the top */}
@@ -102,6 +116,7 @@ const SignUp = ({ onSignUp }) => {
 						<PersonAddOutlinedIcon fontSize="large" />
 					</Avatar>
 				</Box>
+
 				{/* Title */}
 				<Typography
 					variant="h5"
@@ -111,6 +126,7 @@ const SignUp = ({ onSignUp }) => {
 				>
 					Sign Up
 				</Typography>
+
 				{/* Form */}
 				<Box
 					component="form"
@@ -176,13 +192,9 @@ const SignUp = ({ onSignUp }) => {
 						<DatePicker
 							label="Date of Birth"
 							value={dob}
-							onChange={(
-								newValue
-							) => {
-								setDob(
-									newValue
-								);
-							}}
+							onChange={(newValue) =>
+								setDob(newValue)
+							}
 							onClose={handleBlur} // Mark as touched when the date picker is closed
 							renderInput={(
 								params
@@ -234,6 +246,7 @@ const SignUp = ({ onSignUp }) => {
 						Sign Up
 					</Button>
 				</Box>
+
 				{/* Footer */}
 				<Typography
 					variant="body2"
@@ -247,7 +260,7 @@ const SignUp = ({ onSignUp }) => {
 					<a href="/login">Login</a>
 				</Typography>
 			</Paper>
-		</Container>
+		</Box>
 	);
 };
 

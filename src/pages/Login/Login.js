@@ -32,12 +32,25 @@ function Login({ onLogin }) {
 	};
 
 	return (
-		<Container maxWidth="xs" sx={{ mt: 8 }}>
+		<Box
+			sx={{
+				minHeight: "100vh",
+				backgroundImage: "url('/images/login.jpeg')", // Background image for login page
+				backgroundSize: "cover",
+				backgroundPosition: "center",
+				display: "flex",
+				justifyContent: "center",
+				alignItems: "center",
+				p: 2,
+			}}
+		>
 			<Paper
-				elevation={3}
+				elevation={6}
 				sx={{
 					padding: 4,
-					borderRadius: 2,
+					borderRadius: 3,
+					bgcolor: "rgba(255, 255, 255, 1)", // Semi-transparent white background
+					width: { xs: "90%", sm: "400px" }, // Card width
 				}}
 			>
 				{/* Logo at the top */}
@@ -59,6 +72,7 @@ function Login({ onLogin }) {
 						<LockOutlinedIcon fontSize="large" />
 					</Avatar>
 				</Box>
+
 				{/* Title */}
 				<Typography
 					variant="h5"
@@ -68,6 +82,7 @@ function Login({ onLogin }) {
 				>
 					Login
 				</Typography>
+
 				{/* Form */}
 				<Box
 					component="form"
@@ -128,6 +143,7 @@ function Login({ onLogin }) {
 						Login
 					</Button>
 				</Box>
+
 				{/* Footer */}
 				<Typography
 					variant="body2"
@@ -141,7 +157,7 @@ function Login({ onLogin }) {
 					<a href="/signup">Sign Up</a>
 				</Typography>
 			</Paper>
-		</Container>
+		</Box>
 	);
 }
 
