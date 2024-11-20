@@ -139,7 +139,7 @@ function ResponsiveDrawer({ isDrawerOpen, toggleDrawer }) {
 						</ListItemIcon>
 						<ListItemText primary="Asset" />
 					</ListItem>
-					<ListItem
+					{/* <ListItem
 						button
 						component={StyledLink}
 						to="/dashboard/watchlist"
@@ -149,7 +149,7 @@ function ResponsiveDrawer({ isDrawerOpen, toggleDrawer }) {
 							<ViewListIcon />
 						</ListItemIcon>
 						<ListItemText primary="WatchList" />
-					</ListItem>
+					</ListItem> */}
 				</List>
 			</Slide>
 		</Drawer>
