@@ -1,70 +1,159 @@
-# Getting Started with Create React App
+# Investment Fund Management System - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The motivation to build this system comes from the limitations of traditional methods, which
+heavily rely on manual processes/work, spreadsheets to track investments, and paper
+records, which lead to inefficiencies, a higher risk of errors, and are also time-consuming. As
+investment portfolios become more complex and global, involving investment types like
+mutual funds, hedge funds, bonds, and so forth, building an investment fund management
+system offers a more efficient and accurate way to manage financial assets and improve
+decision-making. User can leverage this system to create, update and delete their investment
+data which can help them better manage their investment strategy. This reduces a lot of time
+for them as they have a centralized source of data to refer if they ever need to go back and
+trace their history to make a better decision either now or in future.
 
-## Available Scripts
+## Authors
 
-In the project directory, you can run:
+- [@SujaySN](https://github.com/soul-reaper46)
+- [@Deepansh Chaturvedi](https://github.com/DeepanshChaturvedi)
+- [@Neha Ganeshe](https://github.com/SachinShet73)
+- [@Anagha](https://github.com/anaghagodbole)
+- [@Sanskruti Mahajan](https://github.com/Msanskruti)
 
-### `npm start`
+## Documentation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Initial Project File,](https://github.com/neha-ganeshe4/DMDD_Project/blob/main/DMDD%20Project%20Topic%20and%20Objectives.pdf)
+[Design Document,](https://github.com/neha-ganeshe4/DMDD_Project/blob/main/DMDD%20P2.pdf)
+[Logical ERD](https://github.com/neha-ganeshe4/DMDD_Project/blob/main/P3.pdf)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## License
 
-### `npm test`
+[MIT](https://choosealicense.com/licenses/mit/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `npm run build`
+Below is the basic file structure of the project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+Project Root/
+├── .vscode/
+├── node_modules/
+├── public/
+│   ├── images/
+│   │   ├── android-chrome-192x192.png
+│   │   ├── android-chrome-512x512.png
+│   │   ├── apple-touch-icon.png
+│   │   ├── favicon-16x16.png
+│   │   ├── favicon-32x32.png
+│   │   ├── favicon.ico
+│   │   ├── logo192.png
+│   │   └── logo512.png
+│   ├── index.html
+│   ├── manifest.json
+│   ├── robots.txt
+│   └── site.webmanifest
+│
+├── src/
+│   ├── components/
+│   │   ├── Button/
+│   │   │   └── Button.js
+│   │   ├── Navbar/
+│   │   │   └── Navbar.js
+│   │   ├── ResponsiveDrawer/
+│   │   │   └── ResponsiveDrawer.js
+│   │   └── StyledLink/
+│   │       └── StyledLink.js
+│   │
+│   ├── hooks/
+│   │   └── useAuth.js
+│   │
+│   ├── pages/
+│   │   ├── Analytics/
+│   │   │   └── Analytics.js
+│   │   ├── Asset/
+│   │   ├── Dashboard/
+│   │   │   └── Dashboard.js
+│   │   ├── Home/
+│   │   │   └── Home.js
+│   │   ├── Invest/
+│   │   │   └── invest.js
+│   │   ├── Login/
+│   │   │   ├── Login.js
+│   │   │   └── SignUp.js
+│   │   ├── Portfolio/
+│   │   │   └── Portfolio.js
+│   │   ├── Profile/
+│   │   │   └── Profile.js
+│   │   └── WatchList/
+│   │       └── WatchList.js
+│   │
+│   ├── services/
+│   │   ├── edituserapicall.js
+│   │   ├── getuserapicall.js
+│   │   ├── loginapicall.js
+│   │   └── signupapicall.js
+│   │
+│   ├── theme/
+│   │   └── theme.js
+│   │
+│   ├── utils/
+│   ├── App.js
+│   ├── index.js
+│   └── logo.svg
+│
+├── .gitignore
+├── package-lock.json
+├── package.json
+└── README.md
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Application:** React, Material UI
 
-### `npm run eject`
+## Run Locally
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Create Main Folder "IFMS_Project"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Clone the project
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+  git clone https://github.com/soul-reaper46/IFMS_frontend.git
+```
 
-## Learn More
+Go to the project directory
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+  cd IFMS_frontend
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Install dependencies (Ensure Node.js is installed in System)
 
-### Code Splitting
+```bash
+  npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Start the server
 
-### Analyzing the Bundle Size
+```bash
+  npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To View:
 
-### Making a Progressive Web App
+- Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Make Sure Backend is running first. If you have not initialized backend please head over to [Backend](https://github.com/soul-reaper46/IFMS_backend).
 
-### Advanced Configuration
+## Usage/Example
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+After Starting the Development Server
 
-### Deployment
+* Use the following details to login:
+    User: john.smith@email.com
+    Password: password123
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Else just SignUp as a new user!
+```

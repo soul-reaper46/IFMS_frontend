@@ -71,7 +71,7 @@ function Analytics() {
 	const handleDelete = async (assessmentID) => {
 		try {
 			const response = await fetch(
-				`http://localhost:4000/auth/riskassessment/${assessmentID}`,
+				`http://localhost:4000/api/user/riskassessment/${assessmentID}`,
 				{
 					method: "DELETE",
 				}
